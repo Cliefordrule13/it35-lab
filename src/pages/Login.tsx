@@ -28,11 +28,11 @@ const Login: React.FC = () => {
       </IonHeader>
       <IonContent className='ion-padding'>
       <>
-      <IonInput label="Email" labelPlacement="floating" fill="input" placeholder="Enter text"></IonInput>
+      <IonInput label="Email" labelPlacement="floating" fill="solid" placeholder="Enter text"></IonInput>
 
       <br />
 
-      <IonInput label="Password" labelPlacement="floating" fill="output" placeholder="Enter text"></IonInput>
+      <IonInput label="Password" labelPlacement="floating" fill="outline" placeholder="Enter text"></IonInput>
     </>
           <IonButton onClick={() => doLogin()} expand="full">
               Login
