@@ -1,15 +1,14 @@
 import { 
   IonButtons,
-    IonContent, 
-    IonHeader, 
-    IonMenuButton,
-    IonSearchbar, 
-    IonPage, 
-    IonTitle, 
-    IonToolbar 
+  IonContent, 
+  IonHeader, 
+  IonMenuButton,
+  IonSearchbar, 
+  IonPage, 
+  IonTitle, 
+  IonToolbar 
 } from '@ionic/react';
 import React from 'react';
-
 
 const Search: React.FC = () => {
   return (
@@ -19,19 +18,13 @@ const Search: React.FC = () => {
           <IonButtons slot='start'>
             <IonMenuButton></IonMenuButton>
           </IonButtons>
-          <IonTitle>Search</IonTitle>
+          <IonTitle>Search here! </IonTitle>
+        </IonToolbar>
+        <IonToolbar>
+          <IonSearchbar></IonSearchbar>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-      <IonHeader>
-      <IonToolbar>
-        <IonTitle></IonTitle>
-      </IonToolbar>
-      <IonToolbar>
-        <IonSearchbar></IonSearchbar>
-      </IonToolbar>
-    </IonHeader>
-
       </IonContent>
     </IonPage>
   );

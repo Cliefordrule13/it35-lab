@@ -12,7 +12,8 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonImg,
-  IonIcon
+  IonIcon,
+  IonCardSubtitle
 } from '@ionic/react';
 import { heart, star, bookmark } from 'ionicons/icons';
 
@@ -30,27 +31,15 @@ const Favorites: React.FC = () => {
       <IonContent fullscreen className="ion-padding">
         <IonCard>
           <IonImg 
-            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-ai-image%2Fbeautiful-sunset-beach-el-nido-palawan-philippines_48487039.htm&psig=AOvVaw29sB2T7bh8MdrIJX8Qzg6j&ust=1741939969333000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjw2Z3OhowDFQAAAAAdAAAAABAE"
-            alt="Palawan" 
+            alt="Silhouette of mountains" 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkqeGGoNp2qghqgF5yC37xTS94bTcOujOX0g&s" 
           />
           <IonCardHeader>
-            <IonCardTitle>Palawan</IonCardTitle>
+            <IonCardTitle>Sabangan Malaybalay</IonCardTitle>
+            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
           </IonCardHeader>
           <IonCardContent>
-            <IonText>
-              <p>
-                Palawan, known as the "Last Frontier" of the Philippines, is home to stunning beaches, crystal-clear waters, and breathtaking limestone cliffs. It's a paradise for nature lovers and adventure seekers.
-              </p>
-              <p>
-                <IonIcon icon={heart} color="danger" /> **Save What You Love** – Keep track of your favorite items, places, or memories.
-              </p>
-              <p>
-                <IonIcon icon={star} color="warning" /> **Your Top Picks** – A collection of things that make you happy and inspired.
-              </p>
-              <p>
-                <IonIcon icon={bookmark} color="primary" /> **Easy Access** – Quickly revisit the things that matter most to you.
-              </p>
-            </IonText>
+            Enjoy Life while Exploring this kind of view.
           </IonCardContent>
         </IonCard>
       </IonContent>
