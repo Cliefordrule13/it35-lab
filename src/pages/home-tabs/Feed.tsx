@@ -33,7 +33,7 @@ const Feed: React.FC = () => {
         </div>
         <FeedContainer />
       </IonContent>
-    </IonPage>
+    </IonPage>        
   );
 };
 
