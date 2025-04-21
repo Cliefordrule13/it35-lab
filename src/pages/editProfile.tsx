@@ -34,11 +34,11 @@ import React, { useState, useRef, useEffect } from 'react';
              return;
            }
        
-           // Fetch user details from Supabase using the session's email
+           
            const { data: user, error: userError } = await supabase
              .from('users')
              .select('user_firstname, user_lastname, user_avatar_url, user_email, username')
-             .eq('user_email', session.session.user.email) // Use email from the session
+             .eq('user_email', session.session.user.email) 
              .single();
        
            if (userError || !user) {
