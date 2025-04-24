@@ -1,19 +1,20 @@
-import { 
+import {
   IonAlert,
   IonAvatar,
   IonButton,
-  IonContent, 
-  IonIcon, 
-  IonInput, 
-  IonInputPasswordToggle,  
-  IonPage,  
-  IonToast,  
+  IonContent,
+  IonIcon,
+  IonInput,
+  IonInputPasswordToggle,
+  IonPage,
+  IonToast,
   useIonRouter
 } from '@ionic/react';
-import { logoTwitter } from 'ionicons/icons'; // Changed to Twitter icon
+import { logoTwitter } from 'ionicons/icons'; // Not used but kept if needed
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
 
+// Reusable AlertBox Component
 const AlertBox: React.FC<{ message: string; isOpen: boolean; onClose: () => void }> = ({ message, isOpen, onClose }) => {
   return (
     <IonAlert
@@ -43,28 +44,27 @@ const Login: React.FC = () => {
       return;
     }
 
-    setShowToast(true); 
+    setShowToast(true);
     setTimeout(() => {
       navigation.push('/it35-lab/app', 'forward', 'replace');
     }, 300);
   };
-  
+
   return (
     <IonPage>
-      <IonContent className="ion-padding">
-      <div 
-  style={{
-    maxWidth: '400px',
-    margin: 'auto',
-    marginTop: '15%',
-    padding: '20px',
-    borderRadius: '16px',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-    background: 'linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)',
-    color: '#fff'
-  }}
+      <IonContent className="ion-padding instagram-background">
+        <div
+          style={{
+            maxWidth: '400px',
+            margin: 'auto',
+            marginTop: '15%',
+            padding: '20px',
+            borderRadius: '16px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+            backgroundColor: 'linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'
+          }}
         >
-          <div 
+          <div
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -72,44 +72,45 @@ const Login: React.FC = () => {
               marginBottom: '20px'
             }}
           >
-           <IonAvatar
-  style={{
-    width: '120px',
-    height: '120px',
-    marginBottom: '20px',
-    overflow: 'hidden',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  }}
->
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
-    alt="Instagram Logo"
-    style={{
-      width: '100px',
-      height: '100px',
-      animation: 'float 1s ease-in-out infinite'
-    }}
-  />
-</IonAvatar>
+            <IonAvatar
+              style={{
+                width: '120px',
+                height: '120px',
+                marginBottom: '20px',
+                overflow: 'hidden',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}
+            >
+              <img
+                src="https://png.pngtree.com/png-clipart/20190613/original/pngtree-instagram-icon-logo-png-image_3560506.jpg"
+                alt="Instagram logo"
+                style={{
+                  width: '100px',
+                  height: '100px',
+                  animation: 'float 1s ease-in-out infinite'
+                }}
+              />
+            </IonAvatar>
 
-<style>
-  {`
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0px); }
-    }
-  `}
-</style>
-
-            <h1 style={{ margin: '0', fontWeight: 'bold' }}>WELCOME</h1>
+            <div
+              style={{
+                background: 'linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'white orange',
+                fontWeight: 'bold',
+                fontSize: '28px',
+                margin: 0
+              }}
+            >
+              USER LOGIN
+            </div>
           </div>
 
           <IonInput
-            label="Email" 
-            labelPlacement="floating" 
+            label="Email"
+            labelPlacement="floating"
             fill="outline"
             type="email"
             placeholder="Enter Email"
@@ -124,22 +125,22 @@ const Login: React.FC = () => {
             value={password}
             onIonChange={e => setPassword(e.detail.value!)}
           >
-            <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+            <IonInputPasswordToggle slot="end" />
           </IonInput>
 
-          <IonButton 
-            onClick={doLogin} 
-            expand="block" 
-            shape="round" 
+          <IonButton
+            onClick={doLogin}
+            expand="block"
+            shape="round"
             style={{ marginTop: '25px' }}
           >
             Login
           </IonButton>
 
-          <IonButton 
-            routerLink="/it35-lab/register" 
-            expand="block" 
-            fill="clear" 
+          <IonButton
+            routerLink="/it35-lab/register"
+            expand="block"
+            fill="clear"
             shape="round"
             style={{ marginTop: '10px' }}
           >
@@ -147,10 +148,8 @@ const Login: React.FC = () => {
           </IonButton>
         </div>
 
-        {/* Reusable AlertBox Component */}
+        {/* Alert and Toast Components */}
         <AlertBox message={alertMessage} isOpen={showAlert} onClose={() => setShowAlert(false)} />
-
-        {/* IonToast for success message */}
         <IonToast
           isOpen={showToast}
           onDidDismiss={() => setShowToast(false)}
@@ -159,6 +158,22 @@ const Login: React.FC = () => {
           position="top"
           color="primary"
         />
+
+        {/* Embedded Styles */}
+        <style>
+          {`
+            @keyframes float {
+              0% { transform: translateY(0px); }
+              50% { transform: translateY(-5px); }
+              100% { transform: translateY(0px); }
+            }
+
+            .instagram-background {
+              --background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+              min-height: 100%;
+            }
+          `}
+        </style>
       </IonContent>
     </IonPage>
   );
