@@ -84,7 +84,7 @@ const Login: React.FC = () => {
               }}
             >
               <img
-                src="https://png.pngtree.com/png-clipart/20190613/original/pngtree-instagram-icon-logo-png-image_3560506.jpg"
+                src="https://cdn.dribbble.com/userupload/10140061/file/original-c6dc023aab6021a2a58c0541dc99752e.gif"
                 alt="Instagram logo"
                 style={{
                   width: '100px',

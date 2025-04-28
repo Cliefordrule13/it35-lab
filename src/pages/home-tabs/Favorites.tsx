@@ -35,6 +35,9 @@ const Favorites: React.FC = () => {
           <IonCardHeader>
             <IonCardTitle style={{ textAlign: 'center' }}>CANADA</IonCardTitle>
           </IonCardHeader>
+          <IonCardHeader>
+            <IonCardTitle style={{ textAlign: 'center' }}>Canada is a vast and rugged land. From north to south it spans more than half the Northern Hemisphere.</IonCardTitle>
+          </IonCardHeader>
         </IonCard>
 
         <IonCard>
@@ -45,6 +48,9 @@ const Favorites: React.FC = () => {
           />
           <IonCardHeader>
             <IonCardTitle style={{ textAlign: 'center' }}>TOKYO, JAPAN</IonCardTitle>
+          </IonCardHeader>
+          <IonCardHeader>
+            <IonCardTitle style={{ textAlign: 'center' }}>Tokyo is the capital of Japan and a sprawling metropolis that blends modern innovation with rich cultural traditions. It's a major global hub for finance, culture, and industry, located on the Pacific Ocean side of Honshu, Japan's main island.</IonCardTitle>
           </IonCardHeader>
         </IonCard>
 
@@ -57,6 +63,9 @@ const Favorites: React.FC = () => {
           <IonCardHeader>
             <IonCardTitle style={{ textAlign: 'center' }}>SWITZERLAND</IonCardTitle>
           </IonCardHeader>
+          <IonCardHeader>
+            <IonCardTitle style={{ textAlign: 'center' }}>Switzerland is renowned for its stunning natural beauty, particularly its majestic Swiss Alps, and is also famous for its luxury watchmaking industry, high-quality chocolate, and efficient public transportation.</IonCardTitle>
+          </IonCardHeader>
         </IonCard>
 
         <IonCard>
@@ -67,6 +76,9 @@ const Favorites: React.FC = () => {
           />
           <IonCardHeader>
             <IonCardTitle style={{ textAlign: 'center' }}>LAND OF WANO</IonCardTitle>
+          </IonCardHeader>
+          <IonCardHeader>
+            <IonCardTitle style={{ textAlign: 'center' }}>In the fictional world of One Piece, the "Land of Wano" is a country in the New World, known for its unique samurai culture and being ruled by a Shogun.</IonCardTitle>
           </IonCardHeader>
         </IonCard>
 
