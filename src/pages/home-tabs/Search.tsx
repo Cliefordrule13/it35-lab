@@ -4,9 +4,12 @@ import {
       IonHeader, 
       IonMenuButton, 
       IonPage, 
+      IonSearchbar, 
       IonTitle, 
       IonToolbar 
   } from '@ionic/react';
+import { searchCircle } from 'ionicons/icons';
+  
   const Search: React.FC = () => {
     return (
       <IonPage>
@@ -19,6 +22,10 @@ import {
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
+        <>
+      
+      <IonSearchbar searchIcon={searchCircle} placeholder="Custom Search Icon"></IonSearchbar>
+    </>
         <div
           style={{
             display: 'flex',
@@ -29,8 +36,10 @@ import {
         >
           Search
         </div>
+
         </IonContent>
       </IonPage>
     );
   };
+  
   export default Search;
